@@ -16,13 +16,40 @@ This is the notes from version control course from Coursera: https://www.courser
 11. `git branch [branch name]`: This command creates a new branch with the specified name.
 12. `git checkout -b [branch name]`: Creates a new branch and switches to it.
 13. `git add .`: Adds all new and changed files to the staging area.
-14. `git pull`: Fetches and downloads content from the remote repository and immediately updates the local repository to match that content.
-15.  `git rebase`: Moves or combines a sequence of commits to a new base commit. It's used to integrate changes from one branch into another.
-16.   `git commit -m`: Commits staged changes with a message.
+14. `git commit -m`: Commits staged changes with a message.
+15. `git pull`: Fetches and downloads content from the remote repository and immediately updates the local repository to match that content.
+16.  `git rebase`: Moves or combines a sequence of commits to a new base commit. It's used to integrate changes from one branch into another.
 17. `git merge [alias]/[branch]`: Merges changes from the specified branch.
 18. 
 19. `gh repo clone [url]`: Clones a repository from the specified URL using GitHub CLI.
 20. `gh auth login`: Logs in to GitHub CLI.
+
+## Generate SSH keys
+The process is the same for both Windows and Mac. On Windows, you can use the Git Bash terminal and on Mac, the standard terminal will work.
+
+1. Open the terminal
+
+2. Enter the following:
+`ssh-keygen -t ed25519 -C "your@email.com"`
+
+3. Replace the email with your own and press enter.
+
+4. It will prompt to enter a password. Hit enter to skip setting a password and do the same for entering the same passphrase again.
+
+5. Once you have confirmed it will generate the above to confirm the keys have been created.
+
+6. Both keys will be stored in the .ssh folder.
+
+7. In order to add our key to Github, we need to get a copy of the public key which is always identified as .pub in your local directory.
+
+Find the name of the key file using the below command.
+`ls ~/.ssh/`
+
+Then, use the below command to copy the file, replacing the `<YOUR KEY>` with the name of the key file on your device. This step differs between Windows and Mac.
+
+For Mac:  `pbcopy < ~/.ssh/<YOUR KEY>.pub`
+
+For Windows: `cat ~/.ssh/<YOUR KEY>.pub | clip `
 
 
 ## Here are some commonly used Unix commands:
