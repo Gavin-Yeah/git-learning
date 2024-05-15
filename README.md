@@ -75,4 +75,5 @@ For Windows: `cat ~/.ssh/<YOUR KEY>.pub | clip `
 19. `<`: Take input from a file
 20. `less`: Check the content of a file
 21. `2>`: Redirect error output (`2>&1` to redirect both stdout and stderr)
-22. `grep`: Search for a pattern in a file or output (`i` for case insensitive, `w` for exact match)
+22. `grep`: Search for a pattern in a file or output (`-i` for case insensitive, `-w` for exact match)
+23. `uniq`: `-i` ignore case, `-u` only output unique line.
